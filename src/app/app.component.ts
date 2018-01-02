@@ -1,16 +1,21 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = 'app';
-  inputHint: string = '需要做什麼?';
+  title = "app";
+  inputHint: string = "需要做什麼?";
 
-  todos:any[] = [];
+  todos: any[] = [];
   addTodo(target: HTMLInputElement) {
-    this.todos.push(target.value)
+    console.log(target.value);
+    if (target.value == "") {
+      return false;
+    } else {
+      this.todos.push(target.value);
+    }
   }
 }
