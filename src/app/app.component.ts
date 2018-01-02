@@ -10,12 +10,13 @@ export class AppComponent {
   inputHint: string = "需要做什麼?";
 
   todos: any[] = [];
-  addTodo(target: HTMLInputElement) {
-    console.log(target.value);
-    if (target.value == "") {
+  todo: string = "";
+  addTodo() {
+    if (this.todo == "") {
       return false;
     } else {
-      this.todos.push(target.value);
+      this.todos.push(this.todo);
+      this.todo = "";
     }
   }
 }
