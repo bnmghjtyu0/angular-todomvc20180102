@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TitleComponent implements OnInit {
   title: string = '持續NG中';
-  titleHint: string = 'NG帶你通往夢想國度'
+  titleHint: string = 'NG帶你通往夢想國度';
   constructor() { }
 
   ngOnInit() {
